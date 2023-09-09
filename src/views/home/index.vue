@@ -377,6 +377,7 @@ const initBarChart = () => {
 				type: 'category',
 				data: ['1km', '2km', '3km', '4km', '5km', '6km'],
 				boundaryGap: true,
+				//坐标刻度的设置
 				axisTick: { show: false },
 			},
 		],
@@ -385,9 +386,19 @@ const initBarChart = () => {
 				name: '供回温度(℃）',
 				nameLocation: 'middle',
 				nameTextStyle: { padding: [3, 4, 50, 6] },
+				//坐标轴在 grid 区域中的分隔线。
 				splitLine: { show: true, lineStyle: { type: 'dashed', color: '#f5f5f5' } },
-				axisLine: { show: false },
-				axisTick: { show: false },
+				//坐标轴轴线相关设置。
+				axisLine: {
+					show: true,
+					lineStyle: { color: '#333', width: 2 },
+				},
+				//坐标轴刻度相关设置。
+				axisTick: {
+					show: true,
+					lineStyle: { color: '#333', width: 2 },
+				},
+				// 坐标轴刻度标签的相关设置。
 				axisLabel: { color: state.charts.color, formatter: '{value} ' },
 			},
 			{

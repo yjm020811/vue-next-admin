@@ -340,7 +340,9 @@ const initPieChart = () => {
 		series: [
 			{
 				type: 'pie',
+				//有两个参数,第一个为内半径,第二个为外半径	
 				radius: ['82', themeConfig.value.isIsDark ? '50' : '102'],
+				//饼图的中心坐标
 				center: ['32%', '50%'],
 				itemStyle: {
 					color: function (params: any) {
